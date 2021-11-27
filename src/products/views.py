@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Product
-from .forms import ProductForm
+from .form import ProductForm
 
 # Create your views here.
 def product_create_view(request, *args, **kwargs):
@@ -15,7 +15,6 @@ def product_create_view(request, *args, **kwargs):
     return render(request, "products/product_create.html", context)
 
 def product_detail_view(request, *args, **kwargs):
-    # obj = Product.objects.get(id=1)
     obj = Product.objects.all()
     context = {
         'object': obj
