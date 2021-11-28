@@ -2,12 +2,10 @@
 
 {% block content %}
 <h1>Products</h1>
-    <div class="container">
     {% for o in object %}
         <h1>{{ o.title }}</h1>
         <p>{{ o.description }}</p>
         <h4>{{ o.price }}</h4>
         <b>Sold: {{ o.sold_out }}</b>
     {% endfor %}
-    </div>
 {% endblock content %}
